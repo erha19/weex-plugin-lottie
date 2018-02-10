@@ -17,34 +17,34 @@ $ weex plugin add weex-plugin-lottie
 
 ## Usage
 
-Examples: [examples](.//tree/master/examples/index.vue)
+Examples: [examples](./examples/index.vue)
 
 Animation instances have these main methods:
 
-### play
+### #play
 
-### stop
+### #stop
 
-### pause
+### #pause
 
-### setLocationHref(href)
+### #setLocationHref(href)
 - `href`: usually pass as `location.href`. Its useful when you experience mask issue in safari where your url does not have `#` symbol.
 
-### setSpeed(speed)
+### #setSpeed(speed)
 - `speed`: 1 is normal speed.
 
-### goToAndStop(value, isFrame)
+### #goToAndStop(value, isFrame)
 - `value`: numeric value.
 - `isFrame`: defines if first argument is a time based value or a frame based (default false).
 
-### goToAndPlay(value, isFrame)
+### #goToAndPlay(value, isFrame)
 - `value`: numeric value.
 - `isFrame`: defines if first argument is a time based value or a frame based (default false).
 
-### setDirection(direction)
+### #setDirection(direction)
 - `direction`: 1 is forward, -1 is reverse.
 
-### playSegments(segments, forceFlag)
+### #playSegments(segments, forceFlag)
 - `segments`: array. Can contain 2 numeric values that will be used as first and last frame of the animation. Or can contain a sequence of arrays each with 2 numeric values.
 - `forceFlag`: boolean. If set to false, it will wait until the current segment is complete. If true, it will update values immediately.
 
