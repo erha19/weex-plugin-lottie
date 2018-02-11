@@ -23,7 +23,9 @@ const helper = require('./helper');
  * @param {Array} entry 
  */
 const generateHtmlWebpackPlugin = (entry) => {
-  const entrys = Object.keys(entry);
+  let entrys = Object.keys(entry);
+  // exclude vendor entry.
+  entrys = entrys.filter(entry => Object.keys(entry)[0] !== 'vendor' );
   const htmlPlugin = entrys.map(name => {
     return new HtmlWebpackPlugin({
       filename: name + '.html',
@@ -32,7 +34,7 @@ const generateHtmlWebpackPlugin = (entry) => {
       chunksSortMode: 'dependency',
       inject: true,
       devScripts: config.htmlWebpackPlugin.options.devScripts,
-      chunks: ['phantom-limb', name]
+      chunks: ['vendor', name]
     })
   })
   return htmlPlugin;

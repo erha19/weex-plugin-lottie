@@ -3,7 +3,7 @@ const fs = require('fs-extra');
 const webpack = require('webpack');
 const webEntry = {
   'index': path.resolve('examples/entry.js'),
-  'phantom-limb': path.resolve('node_modules/phantom-limb/index.js')
+  'vendor': path.resolve('node_modules/phantom-limb/index.js')
 }
 const weexEntry = {
   'index': path.resolve('examples/index.vue')

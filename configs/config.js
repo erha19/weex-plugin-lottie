@@ -9,28 +9,6 @@ const config = {
   pluginFilePath: 'plugins/plugin.js',
   // common
   templateDir: '.temp',
-
-  htmlWebpackPlugin: {
-    options: {
-      devScripts: 
-`
-<script>
-  window.addEventListener('load', function () {
-    var is_touch_device = function () {
-      return 'ontouchstart' in window // works on most browsers
-          || 'onmsgesturechange' in window; // works on ie10
-    };
-    if(!is_touch_device) {
-      if (window.parent === window) { // not in iframe.
-        window.phantomLimb.stop()
-      }
-    }
-  })
-</script>
-`
-    }
-  },
-
   entryFilePath: './src/entry.js',
   dev: {
     // Various Dev Server settings
@@ -65,7 +43,24 @@ const config = {
     proxyTable: {},
     autoOpenBrowser: false,
     errorOverlay: true,
-    notifyOnErrors: true
+    notifyOnErrors: true,
+    htmlOptions: {
+      devScripts: `
+        <script>
+          window.addEventListener('load', function () {
+            var is_touch_device = function () {
+              return 'ontouchstart' in window // works on most browsers
+                  || 'onmsgesturechange' in window; // works on ie10
+            };
+            if(!is_touch_device()) {
+              if (window.parent === window) { // not in iframe.
+                window.phantomLimb.stop()
+              }
+            }
+          })
+        </script>
+        `
+    }
   },
 
   prod: {

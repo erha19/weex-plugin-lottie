@@ -48,25 +48,25 @@ const lottie = {
     pause () {
       this.lottieCrtl.pause();
     },
-    destroy() {
+    destroy () {
       this.lottieCrtl.destroy();
     },
-    setLocationHref(href) {
+    setLocationHref (href) {
       this.lottieCrtl.setLocationHref(href);
     },
-    setSpeed(speed) {
+    setSpeed (speed) {
       this.lottieCrtl.setSpeed(speed);
     },
-    goToAndStop(value, isFrame) {
+    goToAndStop (value, isFrame) {
       this.lottieCrtl.goToAndStop(value, isFrame);
     },
-    setDirection(direction) {
+    setDirection (direction) {
       this.lottieCrtl.setDirection(direction);
     },
-    playSegments(segments, forceFlag) {
+    playSegments (segments, forceFlag) {
       this.lottieCrtl.playSegments(segments, forceFlag);
     },
-    setSubframe(useSubFrames) {
+    setSubframe (useSubFrames) {
       this.lottieCrtl.setSubframe(useSubFrames);
     }
   },
