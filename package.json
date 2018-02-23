@@ -1,13 +1,13 @@
 {
   "name": "weex-plugin-lottie",
-  "version": "0.1.0",
-  "main": "./build/index.js",
+  "version": "0.1.1",
+  "main": "./src/index.js",
   "description": "weex-lottie extend for weex",
   "license": "Apache-2.0",
   "WeexSDKVersoin": "0.16.0",
   "web": {
     "name": "weex-plugin-lottie",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "android": {
     "name": "WXLottie",

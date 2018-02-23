@@ -9,7 +9,6 @@ test
 .esdocrc
 .eslintrc
 
-src/
 dist/
 playground/
 web/
