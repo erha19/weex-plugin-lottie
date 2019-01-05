@@ -33,7 +33,7 @@ const generateHtmlWebpackPlugin = (entry) => {
       isDevServer: true,
       chunksSortMode: 'dependency',
       inject: true,
-      devScripts: config.htmlWebpackPlugin.options.devScripts,
+      devScripts: config.dev.htmlOptions.devScripts,
       chunks: ['vendor', name]
     })
   })
